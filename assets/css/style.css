@@ -1,159 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Russo+One&display=swap');
+
 * {
     margin: 0;
     padding: 0;
 }
 
-
+/*GENERAL*/
 header{
-    height: 20vh;
-    background-color: rgb(230, 88, 88);
-    width: 100vw;
     position: sticky;
     top: 0px;
+    z-index: 4;
 }
 
-.header__menu__ul__li__a{
+.color{
+    background-color:  rgb(230, 88, 88);
+}
+
+.color__button__var{
+    border: black solid 1px;
+}
+
+.nav__color__hover:hover {
+    color: black;
+}
+
+.ul__li__a__color{
     text-decoration: none;
-    color: rgb(240, 247, 238)
+    color: white;
+    font-family: 'Roboto', sans-serif;
 }
 
-.header__div{
-    height: 100px;
-    width: 100px;
-    position: absolute;
-    left: 1.5%;
-    top: 12%;
+.ul__li__a__activo{
+    font-weight: bold;
+}
+
+.header__nav__div__logo{
+    height: 50px;
+    width: 50px;
     background-color: transparent;
 }
 
-.header__menu__ul{
-    float: right;
-    padding-top: 9rem;
-}
-
-.header__menu__ul__li{
-    display: inline;
-    margin: 2rem;
-    text-align: center;
-    font-size: 2rem;
+.fuente{
+    font-family: 'Roboto', sans-serif;
 }
 
 .main{
-    height: 100vh;
-    width: 100vw;
-    overflow: auto;
-    background-color: rgb(240, 247, 238)
-}
-
-.main__novedades__h2{
-    text-align: left;
-    padding: 10px;
-    font-size: 4rem;
-}
-
-.main__novedades{
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.novedades__tarjeta1{
-    border: solid 8px;
-    padding: 10px;
-    width: 230px;
-}
-
-.novedades__tarjeta2{
-    border: solid 8px;
-    padding: 10px;
-    width: 230px;
-    margin-top: 50px;
-}
-
-.novedades__tarjeta3{
-    border: solid 8px;
-    padding: 10px;
-    width: 230px;
-}
-
-.main__destacados__h2{
-    text-align: left;
-    padding: 10px;
-    font-size: 4rem;
-}
-
-.main__destacados{
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.destacados__tarjeta1{
-    border: solid 8px;
-    padding: 10px;
-    width: 230px;
-}
-
-.destacados__tarjeta2{
-    border: solid 8px;
-    padding: 10px;
-    width: 230px;
-}
-
-.destacados__tarjeta3{
-    border: solid 8px;
-    padding: 10px;
-    width: 230px;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    background-color:white
 }
 
 footer{
-    width: 100vw;
-    height: 30vh;
-    background-color:   rgb(230, 88, 88);
+    background-color:  rgb(230, 88, 88);
+    width: 100%;
     overflow: auto;
+    overflow-x: hidden;
 }
 
 .footer__logo{
     height: 100px;
     width: 100px;
-    left: 1.5%;
+    grid-area: logo;
     background-color: transparent;
-    position: absolute;
+    margin-top: 20px;
 }
 
 .footer__redes{
-    margin: 1rem;
-    height: 50%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.footer__redes__div{
-    height: 100px;
-    width: 100px;
-    background-color: transparent;
-}
-
-.footer__separacion {
-    display: absolute;
-    border-top: 4px solid black;
-    height: 2px;
-    max-width: 60%;
-    padding: 0;
-    margin: 20px auto 0 auto;
-}
-
-.footer__aclaracion{
-    height: 40%;
-    width: 100%;
-    color: black;
-    padding-top: 2rem;
-    padding-left: 2rem;
-    font-size: 2.5rem;
+    grid-area: redes;
 }
 
 img{
@@ -161,6 +75,240 @@ img{
     width: 100%;
 }
 
-::-webkit-scrollbar {
-    display: none;
+.footer__aclaracion{
+    width: 100%;
+    color: black;
+    padding: 2rem 1.5rem 1.5rem 0rem;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+    font-size: 0.8rem;
+    grid-area: descripcion;
 }
+
+.grilla{
+    display: grid;
+    grid-template-areas:
+            "logo"
+            "redes"
+            "descripcion";
+    justify-items: center;
+}
+
+
+.wrapper .icon {
+    position: relative;
+    background: rgb(42, 43, 46);
+    border-radius: 50%;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    z-index: 3;
+}
+
+.wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .icon:hover span,
+.wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(255, 250, 250, 0.1);
+}
+
+.wrapper .facebook:hover,
+.wrapper .facebook:hover .tooltip,
+.wrapper .facebook:hover .tooltip::before {
+    background: #1877F2;
+    color: #fff;
+}
+
+.wrapper .instagram:hover,
+.wrapper .instagram:hover .tooltip,
+.wrapper .instagram:hover .tooltip::before {
+    background: #E4405F;
+    color: #fff;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    height: 200px;
+    width: 100%;
+    padding-top: 20px;
+    margin-right: 30px;
+    font-family: "Poppins", sans-serif;
+    justify-content: flex-start;
+}
+
+/* HOME PAGE*/ /* VISTA MOBILE = MOBILE FIRST*/
+.main__h2{
+    text-align: left;
+    font-size: 3rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    font-weight: bold;
+    margin: 1rem;
+}
+
+.main__actividades{
+    background-color: white;
+    overflow-y: auto;
+}
+
+.main__actividades__article__div {
+    height: 250px;
+    width: 250px;
+    margin: 20px;
+}
+
+.article__position{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.main__actividades__article__div__h2{
+    text-align: center;
+    font-size: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+}
+
+.main__actividades__article__p {
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+}
+
+.main__instalaciones{
+    background-color: rgb(230, 88, 88);
+    overflow: auto;
+}
+
+.card {
+    width: 20rem;
+    height: 22rem;
+    background-color:rgb(7, 7, 7);
+    border-radius: 1rem;
+    border: #212121 0.2rem solid;
+    transition: all 0.4s ease-in;
+    position: static;
+}
+
+.card:hover {
+    transform: translateY(-1.5rem);
+    border:  rgb(230, 88, 88) 0.2em solid;
+    border-radius: 2.5rem 0 2.5rem 0;
+}
+
+
+/* DESKTOP */
+@media screen and (min-width: 1024px){
+    .altura{
+        height: 89vh;
+    }
+
+    .grilla{
+        display: grid;
+        grid-template-areas:
+            "logo redes"
+            "linea linea"
+            "descripcion descripcion";
+        grid-template-rows: 100px 20px 100px; 
+        grid-template-columns: 1fr 1.5fr;
+        justify-items: flex-start;
+    }
+
+    .footer__redes__ul{
+        display: flex;
+        justify-content:flex-start;
+    }
+
+    .wrapper {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        height: 120px;
+        width: 100%;
+        padding-top: 40px;
+        font-family: "Poppins", sans-serif;
+        justify-content: flex-start;
+    }
+
+    .footer__separacion {
+        display: absolute;
+        width: 100vw;
+        border-top: 2px solid white;
+        height: 2px;
+        max-width: 60%;
+        padding: 0;
+        margin: 20px auto 0 auto;
+    }
+
+    .footer__logo{
+        height: 100px;
+        width: 100px;
+        grid-area: logo;
+        background-color: transparent;
+        margin-top: 20px;
+    }
+    
+    .footer__redes{
+        grid-area: redes;
+    }
+    
+    .separacion{
+        grid-area: linea;
+    }
+
+    .footer__aclaracion{
+        height: 40%;
+        width: 100%;
+        color: rgb(240, 247, 238);
+        padding: 2rem 0rem 0rem 2rem;
+        font-size: 1rem;
+        grid-area: descripcion;
+    }
+
+    
+}
+
