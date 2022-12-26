@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+header{
+    height: 20vh;
+    background-color: rgb(230, 88, 88);
+    width: 100vw;
+    position: sticky;
+    top: 0px;
+}
+
+.header__menu__ul__li__a{
+    text-decoration: none;
+    color: rgb(240, 247, 238)
+}
+
+.header__div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 1.5%;
+    top: 12%;
+    background-color: transparent;
+}
+
+.header__menu__ul{
+    float: right;
+    padding-top: 9rem;
+}
+
+.header__menu__ul__li{
+    display: inline;
+    margin: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    overflow: auto;
+    background-color: rgb(240, 247, 238)
+}
+
+.main__novedades__h2{
+    text-align: left;
+    padding: 10px;
+    font-size: 4rem;
+}
+
+.main__novedades{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.novedades__tarjeta1{
+    border: solid 8px;
+    padding: 10px;
+    width: 230px;
+}
+
+.novedades__tarjeta2{
+    border: solid 8px;
+    padding: 10px;
+    width: 230px;
+    margin-top: 50px;
+}
+
+.novedades__tarjeta3{
+    border: solid 8px;
+    padding: 10px;
+    width: 230px;
+}
+
+.main__destacados__h2{
+    text-align: left;
+    padding: 10px;
+    font-size: 4rem;
+}
+
+.main__destacados{
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.destacados__tarjeta1{
+    border: solid 8px;
+    padding: 10px;
+    width: 230px;
+}
+
+.destacados__tarjeta2{
+    border: solid 8px;
+    padding: 10px;
+    width: 230px;
+}
+
+.destacados__tarjeta3{
+    border: solid 8px;
+    padding: 10px;
+    width: 230px;
+}
+
+footer{
+    width: 100vw;
+    height: 30vh;
+    background-color:   rgb(230, 88, 88);
+    overflow: auto;
+}
+
+.footer__logo{
+    height: 100px;
+    width: 100px;
+    left: 1.5%;
+    background-color: transparent;
+    position: absolute;
+}
+
+.footer__redes{
+    margin: 1rem;
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer__redes__div{
+    height: 100px;
+    width: 100px;
+    background-color: transparent;
+}
+
+.footer__separacion {
+    display: absolute;
+    border-top: 4px solid black;
+    height: 2px;
+    max-width: 60%;
+    padding: 0;
+    margin: 20px auto 0 auto;
+}
+
+.footer__aclaracion{
+    height: 40%;
+    width: 100%;
+    color: black;
+    padding-top: 2rem;
+    padding-left: 2rem;
+    font-size: 2.5rem;
+}
+
+img{
+    height: 100%;
+    width: 100%;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
